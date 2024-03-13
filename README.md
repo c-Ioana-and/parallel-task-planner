@@ -2,6 +2,7 @@
 
 ## Scop
 Folosirea și acomodarea cu sincronizarea de thread-uri folosind Java Threads, mecanismele Thread.wait(), Syncronized etc.
+Înțelegerea mecanismelor de planificare precum Round Robin, Shortest Queue, Size Interval Task Assignment and Least Work Left.
 
 ## Implementare
 In acest repository se afla 3 clase:
@@ -20,4 +21,4 @@ Ideea pentru calcularea timpului ramas pana la golirea cozii de prioritati este 
 - cand un task este adaugat in coada, adaug durata lui de rulare automat
 - daca acesta devine task-ul curent, scad din workLeft durata lui de rulare, deoarece aceasta va fi calculata din nou in metoda getWorkLeft()
 - daca task-ul este preemptat, atunci trebuie sa adun la loc darata ramas de rulare la workLeft (altfel, atunci cand el redevine task-curent, workLeft va fi mai mic decat ar trebui)
-    TaskComparator - comparator pentru priority queue-ul din clasa MyHost, care compara task-urile dupa prioritate
+- TaskComparator - comparator pentru priority queue-ul din clasa MyHost, care compara task-urile dupa prioritate
