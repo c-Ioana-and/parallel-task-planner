@@ -16,9 +16,9 @@ pentru a retine ultima data cand a fost inceput un task de catre host.
 ruleaza si acesta trebuie preemptat, va apela notify() pe thread-ul care ruleaza task-ul curent.
   - Metoda getWorkLeft(): returneaza timpul ramas pana la golirea cozii de prioritati, calculand si adaugand
 si timpul ramas pentru task-ul curent.
+- TaskComparator - comparator pentru priority queue-ul din clasa MyHost, care compara task-urile dupa prioritate
 
 Ideea pentru calcularea timpului ramas pana la golirea cozii de prioritati este urmatoarea:
 - cand un task este adaugat in coada, adaug durata lui de rulare automat
 - daca acesta devine task-ul curent, scad din workLeft durata lui de rulare, deoarece aceasta va fi calculata din nou in metoda getWorkLeft()
 - daca task-ul este preemptat, atunci trebuie sa adun la loc darata ramas de rulare la workLeft (altfel, atunci cand el redevine task-curent, workLeft va fi mai mic decat ar trebui)
-- TaskComparator - comparator pentru priority queue-ul din clasa MyHost, care compara task-urile dupa prioritate
